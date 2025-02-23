@@ -1,0 +1,116 @@
+2024-12-21 13:45:10,581 - INFO - SELECT DATABASE()
+2024-12-21 13:45:10,581 - INFO - [raw sql] ()
+2024-12-21 13:45:10,584 - INFO - SELECT @@sql_mode
+2024-12-21 13:45:10,584 - INFO - [raw sql] ()
+2024-12-21 13:45:10,585 - INFO - SELECT @@lower_case_table_names
+2024-12-21 13:45:10,585 - INFO - [raw sql] ()
+2024-12-21 13:45:10,586 - INFO - BEGIN (implicit)
+2024-12-21 13:45:10,587 - INFO - DESCRIBE `smartmoney_pump`.`wallet`
+2024-12-21 13:45:10,587 - INFO - [raw sql] ()
+2024-12-21 13:45:10,617 - INFO - DESCRIBE `smartmoney_pump`.`wallet_transactions`
+2024-12-21 13:45:10,617 - INFO - [raw sql] ()
+2024-12-21 13:45:10,623 - INFO - DESCRIBE `smartmoney_pump`.`error_logs`
+2024-12-21 13:45:10,623 - INFO - [raw sql] ()
+2024-12-21 13:45:10,624 - INFO - 
+CREATE TABLE wallet_transactions (
+	id INTEGER NOT NULL AUTO_INCREMENT, 
+	wallet_address VARCHAR(100) NOT NULL, 
+	token_address VARCHAR(100) NOT NULL, 
+	transaction_type VARCHAR(10) NOT NULL, 
+	amount FLOAT NOT NULL, 
+	price FLOAT, 
+	timestamp DATETIME NOT NULL, 
+	signature VARCHAR(100) NOT NULL, 
+	PRIMARY KEY (id), 
+	UNIQUE (signature)
+)
+
+
+2024-12-21 13:45:10,624 - INFO - [no key 0.00005s] ()
+2024-12-21 13:45:10,659 - INFO - COMMIT
+2024-12-21 13:45:10,660 - ERROR - 監控過程中發生錯誤: get_active_wallets() missing 1 required positional argument: 'self'
+2024-12-21 13:51:55,603 - ERROR - 監控過程中發生錯誤: get_active_wallets() missing 2 required positional arguments: 'self' and 'session'
+2024-12-21 13:52:28,228 - ERROR - 監控過程中發生錯誤: get_active_wallets() missing 1 required positional argument: 'session'
+2024-12-21 13:53:14,864 - INFO - SELECT DATABASE()
+2024-12-21 13:53:14,864 - INFO - [raw sql] ()
+2024-12-21 13:53:14,865 - INFO - SELECT @@sql_mode
+2024-12-21 13:53:14,865 - INFO - [raw sql] ()
+2024-12-21 13:53:14,865 - INFO - SELECT @@lower_case_table_names
+2024-12-21 13:53:14,865 - INFO - [raw sql] ()
+2024-12-21 13:53:14,865 - INFO - BEGIN (implicit)
+2024-12-21 13:53:14,867 - INFO - SELECT wallet.address 
+FROM wallet 
+WHERE wallet.is_active = true
+2024-12-21 13:53:14,867 - INFO - [generated in 0.00008s] ()
+2024-12-21 13:53:16,556 - INFO - HTTP Request: POST https://radial-nameless-feather.solana-mainnet.quiknode.pro/609be45a63a9c900ddb4408fdb140aee21f82213 "HTTP/1.1 200 OK"
+2024-12-21 13:54:16,577 - INFO - SELECT wallet.address 
+FROM wallet 
+WHERE wallet.is_active = true
+2024-12-21 13:54:16,579 - INFO - [cached since 61.71s ago] ()
+2024-12-21 13:54:17,748 - INFO - HTTP Request: POST https://radial-nameless-feather.solana-mainnet.quiknode.pro/609be45a63a9c900ddb4408fdb140aee21f82213 "HTTP/1.1 200 OK"
+2024-12-21 13:55:17,798 - INFO - SELECT wallet.address 
+FROM wallet 
+WHERE wallet.is_active = true
+2024-12-21 13:55:17,801 - INFO - [cached since 122.9s ago] ()
+2024-12-21 13:55:18,859 - INFO - HTTP Request: POST https://radial-nameless-feather.solana-mainnet.quiknode.pro/609be45a63a9c900ddb4408fdb140aee21f82213 "HTTP/1.1 200 OK"
+2024-12-21 13:55:21,436 - INFO - ROLLBACK
+2024-12-21 13:58:30,994 - INFO - SELECT DATABASE()
+2024-12-21 13:58:30,995 - INFO - [raw sql] ()
+2024-12-21 13:58:30,995 - INFO - SELECT @@sql_mode
+2024-12-21 13:58:30,995 - INFO - [raw sql] ()
+2024-12-21 13:58:30,996 - INFO - SELECT @@lower_case_table_names
+2024-12-21 13:58:30,996 - INFO - [raw sql] ()
+2024-12-21 13:58:30,996 - INFO - BEGIN (implicit)
+2024-12-21 13:58:30,998 - INFO - SELECT wallet.address 
+FROM wallet 
+WHERE wallet.is_active = true
+2024-12-21 13:58:30,998 - INFO - [generated in 0.00007s] ()
+2024-12-21 13:58:34,947 - INFO - ROLLBACK
+2024-12-21 14:00:41,451 - INFO - SELECT DATABASE()
+2024-12-21 14:00:41,451 - INFO - [raw sql] ()
+2024-12-21 14:00:41,452 - INFO - SELECT @@sql_mode
+2024-12-21 14:00:41,452 - INFO - [raw sql] ()
+2024-12-21 14:00:41,452 - INFO - SELECT @@lower_case_table_names
+2024-12-21 14:00:41,452 - INFO - [raw sql] ()
+2024-12-21 14:00:41,453 - INFO - BEGIN (implicit)
+2024-12-21 14:00:41,455 - INFO - SELECT wallet.address 
+FROM wallet 
+WHERE wallet.is_active = true
+2024-12-21 14:00:41,455 - INFO - [generated in 0.00007s] ()
+2024-12-21 14:00:43,885 - INFO - ROLLBACK
+2024-12-21 14:02:06,070 - INFO - SELECT DATABASE()
+2024-12-21 14:02:06,071 - INFO - [raw sql] ()
+2024-12-21 14:02:06,071 - INFO - SELECT @@sql_mode
+2024-12-21 14:02:06,071 - INFO - [raw sql] ()
+2024-12-21 14:02:06,071 - INFO - SELECT @@lower_case_table_names
+2024-12-21 14:02:06,071 - INFO - [raw sql] ()
+2024-12-21 14:02:06,072 - INFO - BEGIN (implicit)
+2024-12-21 14:02:06,074 - INFO - SELECT wallet.address 
+FROM wallet 
+WHERE wallet.is_active = true
+2024-12-21 14:02:06,074 - INFO - [generated in 0.00007s] ()
+2024-12-21 14:02:20,799 - INFO - ROLLBACK
+2024-12-21 14:04:55,615 - INFO - SELECT DATABASE()
+2024-12-21 14:04:55,615 - INFO - [raw sql] ()
+2024-12-21 14:04:55,616 - INFO - SELECT @@sql_mode
+2024-12-21 14:04:55,616 - INFO - [raw sql] ()
+2024-12-21 14:04:55,616 - INFO - SELECT @@lower_case_table_names
+2024-12-21 14:04:55,616 - INFO - [raw sql] ()
+2024-12-21 14:04:55,616 - INFO - BEGIN (implicit)
+2024-12-21 14:04:55,619 - INFO - SELECT wallet.address 
+FROM wallet 
+WHERE wallet.is_active = true
+2024-12-21 14:04:55,619 - INFO - [generated in 0.00007s] ()
+2024-12-21 14:04:57,662 - INFO - ROLLBACK
+2024-12-21 14:11:21,086 - INFO - SELECT DATABASE()
+2024-12-21 14:11:21,086 - INFO - [raw sql] ()
+2024-12-21 14:11:21,087 - INFO - SELECT @@sql_mode
+2024-12-21 14:11:21,087 - INFO - [raw sql] ()
+2024-12-21 14:11:21,087 - INFO - SELECT @@lower_case_table_names
+2024-12-21 14:11:21,087 - INFO - [raw sql] ()
+2024-12-21 14:11:21,087 - INFO - BEGIN (implicit)
+2024-12-21 14:11:21,089 - INFO - SELECT wallet.address 
+FROM wallet 
+WHERE wallet.is_active = true
+2024-12-21 14:11:21,089 - INFO - [generated in 0.00007s] ()
+2024-12-21 14:11:27,165 - INFO - ROLLBACK

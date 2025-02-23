@@ -1,1 +1,1 @@
-# solana2
+# smart_money_pump
